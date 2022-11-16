@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="container text-center p-4">
+    <div class="d-flex justify-content-center">
+
+        <div class="card" style="width: 34rem;">
+            
+            <div class="card-body">
+                <h5 class="card-title">You have great chance 👍</h5>
+                <p class="card-text">The model has predicted that you have <strong style="color: green">{{content[0]}}%</strong> chance</p>
+                <a href="/home" class="btn btn-primary">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-title">
+    <h3>Best universities for you to apply</h3>
+    </div>
+    <table class="table-fill">
+    <thead>
+    <tr>
+    <th class="text-left">University</th>
+    <th class="text-left">Website</th>
+    </tr>
+    </thead>
+    <tbody class="table-hover">
+    <tr>
+    <td class="text-left">University of Toronto, Canada</td>
+    <td class="text-left"><a href="https://www.utoronto.ca/"><button>View</button></a></td>
+    </tr>
+    <tr>
+    <td class="text-left">McGill University, Canada</td>
+    <td class="text-left"><a href="https://www.mcgill.ca/"><button>View</button></a></td>
+    </tr>
+    <tr>
+    <td class="text-left">Cornell University, New York</td>
+    <td class="text-left"><a href="https://www.cornell.edu/"><button>View</button></a></td>
+    </tr>
+    <tr>
+    <td class="text-left">Columbia University, USA</td>
+    <td class="text-left"><a href="https://www.columbia.edu"><button>View</button></a>/</td>
+    </tr>
+    <tr>
+    <td class="text-left">Humboldt University of Berlin, Germany</td>
+    <td class="text-left"><a href="https://www.hu-berlin.de/en"><button>View</button></a></td>
+    </tr>
+    </tbody>
+    </table>
+      
+
+
+{% endblock %}
