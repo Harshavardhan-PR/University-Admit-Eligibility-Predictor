@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div class="container text-center p-4">
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width: 34rem;">
+            
+            <div class="card-body">
+                <h5 class="card-title">Sorry! You have very Less / No chance 👎</h5>
+                <p class="card-text">The model has predicted that you only have <strong style="color: red;">{{content[0]}}%</strong> chance</p>
+                <a href="/home" class="btn btn-primary">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-title">
+    <h3>Universities you can apply for</h3>
+    </div>
+    <table class="table-fill">
+    <thead>
+    <tr>
+    <th class="text-left">University</th>
+    <th class="text-left">Website</th>
+    </tr>
+    </thead>
+    <tbody class="table-hover">
+    <tr>
+    <td class="text-left">University of Alberta, Canada</td>
+    <td class="text-left"><a href="https://www.ualberta.ca/index.html"><button>View</button></a></td>
+    </tr>
+    <tr>
+    <td class="text-left">Carleton University, Canada</td>
+    <td class="text-left"><a href="https://carleton.ca/"><button>View</button></a></td>
+    </tr>
+    <tr>
+    <td class="text-left">University of South Florida</td>
+    <td class="text-left"><a href="https://www.usf.edu/"><button>View</button></a></td>
+    </tr>
+    <tr>
+    <td class="text-left">Saint Louis University, USA</td>
+    <td class="text-left"><a href="https://www.slu.edu/"><button>View</button></a>/</td>
+    </tr>
+    <tr>
+    <td class="text-left">Charité - Universitätsmedizin Berlin, Germany</td>
+    <td class="text-left"><a href="https://www.charite.de/en/"><button>View</button></a></td>
+    </tr>
+    </tbody>
+    </table>
+
+{% endblock %}

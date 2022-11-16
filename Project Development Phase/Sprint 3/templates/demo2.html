@@ -1,0 +1,84 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div class="p-4">
+    <div class="row mb-3">
+        <div class="col-4">
+            <h2 class="text-responsive-h">
+                Fill the required fields and calculate your chance of getting the results
+            </h2>
+            </div>
+        <div class="col-4">
+            <div class="card p-2 ms-2 my-2" style="width: 900px"> 
+                <div class="card-body" style="width: 800px">
+                    <h5 class="card-title pb-4">
+                        Enter the details
+                    </h5>
+                    <form action="/" method="post" id="theForm">
+                        <div class="row mb-3">
+                            <label for="gre" class="col-lg-2 col-form-label">GRE Score: (out of 340)</label>
+                            <div class="col-lg-10" style="padding-top: 10px;">    
+                                <input type="number" class="form-control" id="gre" name="gre" min="250" max="340" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="tofel" class="col-lg-2 col-form-label">TOEFL Score: (out of 120)</label>
+                            <div class="col-lg-10" style="padding-top: 10px;">    
+                                <input type="number" class="form-control" id="tofel" name="tofel" min="50" max="120" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="university_rating" class="col-lg-2 col-form-label">University Ranking: (out of 5)</label>
+                            <div class="col-lg-10" style="padding-top: 10px;">    
+                                <input type="number" class="form-control" id="university_rating" step="0.01" name="university_rating" min="1" max="5" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="sop" class="col-lg-2 col-form-label">SOP: (out of 5)</label>
+                            <div class="col-lg-10" style="padding-top: 10px;">    
+                                <input type="number" class="form-control" id="sop" name="sop" step="0.01" min="1" max="5" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="lor" class="col-lg-2 col-form-label">LOR: (out of 5)</label>
+                            <div class="col-lg-10" style="padding-top: 10px;">    
+                                <input type="number" class="form-control" id="lor" name="lor" step="0.01" min="1" max="5" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="cgpa" class="col-lg-2 col-form-label">CGPA: (out of 10)</label>
+                            <div class="col-lg-10" style="padding-top: 10px;">    
+                                <input type="number" class="form-control" id="cgpa" name="cgpa" step="0.01" min="5" max="10" required>
+                            </div>
+                        </div>
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-2 pt-0" style="width: 130px; padding-left: 0px; padding-right: 0px">Research:</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check" style="padding-left: 150px;">
+                                    <input class="form-check-input" type="radio" name="yes_no_radio" id="gridRadios1" value="1">
+                                    <label class="form-check-label" for="yes_no_radio">
+                                    Yes
+                                    </label>
+                                </div>
+                                <div class="form-check" style="padding-left: 150px;">
+                                    <input class="form-check-input" type="radio" name="yes_no_radio" id="gridRadios2" value="0" checked>
+                                    <label class="form-check-label" for="yes_no_radio">
+                                    No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row lg-3">
+                            <div class="col-lg-2 mb-2 me-3" style="padding-left: 355px; padding-right: 0px">
+                                <button type="submit" class="btn btn-primary" id="button">Predict</button>
+                            </div>
+                            
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
